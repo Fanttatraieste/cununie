@@ -1,7 +1,13 @@
-export function MapsButton({ url, label = "Deschide în Google Maps" }: { url: string; label?: string }) {
+export function MapsButton({
+  url,
+  label = "Deschide în Google Maps",
+}: {
+  url: string;
+  label?: string;
+}) {
   if (!url) {
     return (
-      <span className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-border px-6 py-3 font-sans text-[0.7rem] uppercase tracking-[0.22em] opacity-50">
+      <span className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-border px-5 py-3 font-sans text-sm uppercase tracking-[0.18em] opacity-50">
         <PinIcon /> Link Google Maps în curând
       </span>
     );
@@ -11,7 +17,7 @@ export function MapsButton({ url, label = "Deschide în Google Maps" }: { url: s
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-[0.7rem] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-accent"
+      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-sm uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent"
     >
       <PinIcon /> {label}
     </a>
@@ -20,7 +26,12 @@ export function MapsButton({ url, label = "Deschide în Google Maps" }: { url: s
 
 function PinIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="h-3.5 w-3.5"
+      aria-hidden="true"
+    >
       <path
         d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"
         stroke="currentColor"
@@ -44,7 +55,9 @@ export function MapPlaceholder({ note }: { note: string }) {
         }}
         aria-hidden="true"
       />
-      <p className="relative font-sans text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">{note}</p>
+      <p className="relative font-sans text-sm uppercase tracking-[0.22em] text-muted-foreground">
+        {note}
+      </p>
     </div>
   );
 }

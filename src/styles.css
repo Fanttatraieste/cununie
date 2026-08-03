@@ -67,7 +67,7 @@
 :root {
   --radius: 0.25rem;
   --background: oklch(0.985 0.008 95);
-  --foreground: oklch(0.255 0.028 152);
+  --foreground: oklch(0.13 0.02 275);
   --card: oklch(1 0.004 95);
   --card-foreground: oklch(0.255 0.028 152);
   --popover: oklch(1 0.004 95);
@@ -101,7 +101,6 @@
 }
 
 .dark {
-
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
@@ -149,8 +148,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.02rem;
     -webkit-font-smoothing: antialiased;
   }
 }
-

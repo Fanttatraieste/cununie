@@ -17,20 +17,23 @@ export const ceremony = {
   time: "11:30",
   location: "Primăria Florești",
   address: "Florești, județul Cluj",
-  /** Adaugă aici link-ul Google Maps când îl ai. Lasă gol pentru buton dezactivat. */
-  mapsUrl: "",
-  mapNote: "Harta va fi adăugată în curând",
+  mapsUrl:
+    "https://www.google.com/maps/place/Prim%C4%83ria+Flore%C8%99ti/@46.7428089,23.4814105,16z/data=!4m6!3m5!1s0x47490fd9a3e7df25:0x1e9a4dc81bce0fe7!8m2!3d46.7434486!4d23.4856806!16s%2Fg%2F11ckvlvvtm?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
+  mapNote: "Deschide locația în Google Maps.",
 };
 
 export const weekend = {
   title: "Weekend la Casa Lorelin",
   period: "21 – 23 august",
   location: "Casa Lorelin",
-  /** Informații despre locație — completează mai târziu. */
-  info: "Detaliile despre locație vor fi adăugate în curând.",
-  mapsUrl: "",
-  mapNote: "Harta va fi adăugată în curând",
-  accommodation: "Repartizarea pe camere se va face la sosire.",
+  info: "Transportul până la cabană durează aproximativ o oră. Sunt puțini km, însă după intrarea în pădure, urcarea spre Belis este mai lentă. Drumul este asfaltat.",
+  mapsUrl:
+    "https://www.google.com/maps/place/Cabana+Lorelin/@46.688121,23.0442143,13.25z/data=!4m6!3m5!1s0x4748e7313fd0a993:0xc6feeeac4f13a81b!8m2!3d46.7031045!4d23.0209067!16s%2Fg%2F11dxjvrt_b?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
+  touristUrl:
+    "https://www.turistinfo.ro/calatele/cazare-calatele/casa_lorelin-c98300.html",
+  mapNote: "Deschide locația în Google Maps.",
+  accommodation:
+    "Sunt 10 camere în total; două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. La sosire, doamna de la cazare va nota pe uși cine stă unde.",
 };
 
 export type ScheduleItem = { time: string; title: string; note?: string };
@@ -49,8 +52,8 @@ export const schedule: ScheduleDay[] = [
       { time: "11:30", title: "Cununia civilă" },
       { time: "12:00", title: "Poze" },
       { time: "12:30 – 14:00", title: "Drum către Casa Lorelin" },
-      { time: "14:00", title: "Lunch" },
-      { time: "19:00", title: "Cină" },
+      { time: "14:00", title: "Lunch — platouri și prăjituri" },
+      { time: "19:00", title: "Cină — sarmale" },
     ],
   },
   {
@@ -58,10 +61,10 @@ export const schedule: ScheduleDay[] = [
     date: "22 august",
     items: [
       { time: "09:30", title: "Mic dejun" },
-      { time: "12:30", title: "Prânz" },
-      { time: "19:00", title: "Cină" },
+      { time: "12:30", title: "Prânz — ciorbă de burtă și ciorbă de văcuță" },
+      { time: "18:30", title: "Grătar în aer liber" },
     ],
-    extra: "Foc de tabără",
+    extra: "Nu există cină servită în ziua 2",
   },
   {
     label: "Ziua 3",
@@ -75,29 +78,51 @@ export const schedule: ScheduleDay[] = [
 
 /** Meniu mâncare — adaugă preparatele în listele `items`. */
 export const foodMenu: { name: string; note?: string; items: string[] }[] = [
-  { name: "Mic dejun", note: "09:30", items: [] },
-  { name: "Lunch", note: "14:00", items: [] },
-  { name: "Prânz", note: "12:30", items: [] },
-  { name: "Cină", note: "19:00", items: [] },
+  {
+    name: "Mic dejun",
+    note: "09:30",
+    items: ["Mic dejun servit de Casa Lorelin", "Opțiuni calde și reci"],
+  },
+  {
+    name: "Lunch",
+    note: "14:00",
+    items: ["Platouri cu mâncare", "Prăjituri separate gluten-free"],
+  },
+  {
+    name: "Prânz",
+    note: "12:30",
+    items: ["Ciorbă de burtă", "Ciorbă de văcuță", "Servit de cabană"],
+  },
+  {
+    name: "Cină",
+    note: "19:00",
+    items: [
+      "Sarmale fără gluten (fără vegeta)",
+      "Porții separate pentru intoleranți la gluten",
+    ],
+  },
 ];
 
 /** Meniu băuturi — completează listele. */
 export const drinksMenu: { name: string; items: string[] }[] = [
-  { name: "Vinuri", items: ["Se completează în curând", "Se completează în curând"] },
-  { name: "Bere", items: ["Se completează în curând", "Se completează în curând"] },
-  { name: "Spirtoase", items: ["Se completează în curând", "Se completează în curând"] },
-  { name: "Cocktailuri", items: ["Se completează în curând", "Se completează în curând"] },
+  { name: "Vinuri", items: ["Vin roșu", "Vin alb"] },
+  { name: "Bere", items: ["Bere blondă", "Bere brună"] },
+  {
+    name: "Spirtoase",
+    items: ["Țuică", "Gin", "Whisky", "Aperol", "Vodka", "Rom"],
+  },
+  { name: "Cocktailuri", items: ["Aperol Spritz", "Gin tonic", "Vodka tonic"] },
   {
     name: "Băuturi non-alcoolice",
-    items: ["Se completează în curând", "Se completează în curând"],
+    items: ["Apă plată", "Apă minerală", "Suc", "Fructe și gheață"],
   },
-  { name: "Cafea / Ceai", items: ["Se completează în curând", "Se completează în curând"] },
+  { name: "Cafea / Ceai", items: ["Cafea", "Ceai"] },
 ];
 
 export const usefulInfo: { title: string; body: string }[] = [
   {
     title: "Cazare",
-    body: "Cazarea este la Casa Lorelin, în perioada 21 – 23 august. Repartizarea pe camere se va face la sosire.",
+    body: "Cazarea este la Casa Lorelin, în perioada 21 – 23 august. Sunt 10 camere în total; două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. Repartizarea pe camere se face la sosire.",
   },
   {
     title: "Ce să iei cu tine",
@@ -105,11 +130,15 @@ export const usefulInfo: { title: string; body: string }[] = [
   },
   {
     title: "Transport",
-    body: "Drumul de la Primăria Florești către Casa Lorelin durează aproximativ o oră și jumătate. Detaliile se vor completa în curând.",
+    body: "Transportul de la Primăria Florești până la Casa Lorelin durează aproximativ 1h. Sunt puțini km, dar drumul devine mai îngust și merge mai greu după ce intrăm în pădure spre Belis. Totuși, drumul este asfaltat.",
   },
   {
-    title: "Alte informații",
-    body: "Orice detaliu nou va fi adăugat aici înainte de eveniment.",
+    title: "Mese",
+    body: "Micul dejun și prânzul din ziua 2 sunt servite de cabană, la fel ca cina din ziua 1. La sosire, la prânz, vom avea platouri cu mâncare și prăjituri, iar seara avem sarmale. În ziua 2 facem grătar și nu avem cină servită.",
+  },
+  {
+    title: "Alergii alimentare",
+    body: "Avem 3 persoane intolerante la gluten. Prăjiturile și platourile gluten-free sunt separate și celelalte persoane sunt rugate să nu le consume. Sarmalele și ciorbele sunt pregătite fără gluten, inclusiv fără vegeta.",
   },
 ];
 
@@ -119,6 +148,5 @@ export const navLinks = [
   { href: "#program", label: "Program" },
   { href: "#meniu", label: "Meniu" },
   { href: "#bauturi", label: "Băuturi" },
-  { href: "#rsvp", label: "RSVP" },
   { href: "#info", label: "Informații" },
 ];
