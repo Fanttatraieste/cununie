@@ -42,22 +42,3 @@ function PinIcon() {
     </svg>
   );
 }
-
-export function MapPlaceholder({ note }: { note: string }) {
-  return (
-    <div className="relative flex h-48 items-center justify-center overflow-hidden rounded-sm border border-border bg-secondary sm:h-full sm:min-h-[16rem]">
-      <div
-        className="absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-        aria-hidden="true"
-      />
-      <p className="relative font-sans text-sm uppercase tracking-[0.22em] text-muted-foreground">
-        {note}
-      </p>
-    </div>
-  );
-}

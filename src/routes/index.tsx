@@ -4,7 +4,7 @@ import heroForest from "@/assets/hero-forest.jpg";
 import casaLorelin from "@/assets/casa-lorelin.jpg";
 import { Countdown } from "@/components/wedding/Countdown";
 import { LeafDivider, LeafMark } from "@/components/wedding/Leaf";
-import { MapPlaceholder, MapsButton } from "@/components/wedding/MapsButton";
+import { MapsButton } from "@/components/wedding/MapsButton";
 import { Reveal, Section } from "@/components/wedding/Section";
 import {
   ceremony,
@@ -144,14 +144,14 @@ function Index() {
                   ))}
                 </div>
               </div>
-              <div className="mt-10">
-                <MapsButton url={ceremony.mapsUrl} />
-              </div>
             </article>
           </Reveal>
-          <Reveal delay={120}>
-            <MapPlaceholder note={ceremony.mapNote} />
-          </Reveal>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <MapsButton url={ceremony.mapsUrl} />
+            {ceremony.wazeUrl ? (
+              <MapsButton url={ceremony.wazeUrl} label="Deschide în Waze" />
+            ) : null}
+          </div>
         </div>
       </Section>
 
@@ -190,21 +190,21 @@ function Index() {
                   {weekend.accommodation}
                 </p>
               </div>
-              <div className="mt-10 space-y-6">
-                <MapPlaceholder note={weekend.mapNote} />
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <MapsButton url={weekend.mapsUrl} />
-                  {weekend.touristUrl ? (
-                    <a
-                      href={weekend.touristUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center justify-center rounded-full border border-border px-5 py-3 font-sans text-sm uppercase tracking-[0.18em] text-muted-foreground transition hover:bg-secondary/70"
-                    >
-                      Vezi fotografii Casa Lorelin
-                    </a>
-                  ) : null}
-                </div>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <MapsButton url={weekend.mapsUrl} />
+                {weekend.wazeUrl ? (
+                  <MapsButton url={weekend.wazeUrl} label="Deschide în Waze" />
+                ) : null}
+                {weekend.touristUrl ? (
+                  <a
+                    href={weekend.touristUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-border px-5 py-3 font-sans text-sm uppercase tracking-[0.18em] text-muted-foreground transition hover:bg-secondary/70"
+                  >
+                    Vezi fotografii Casa Lorelin
+                  </a>
+                ) : null}
               </div>
             </article>
           </Reveal>

@@ -19,7 +19,7 @@ export const ceremony = {
   address: "Florești, județul Cluj",
   mapsUrl:
     "https://www.google.com/maps/place/Prim%C4%83ria+Flore%C8%99ti/@46.7428089,23.4814105,16z/data=!4m6!3m5!1s0x47490fd9a3e7df25:0x1e9a4dc81bce0fe7!8m2!3d46.7434486!4d23.4856806!16s%2Fg%2F11ckvlvvtm?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
-  mapNote: "Deschide locația în Google Maps.",
+  wazeUrl: "https://waze.com/ul?ll=46.7434486,23.4856806&navigate=yes",
 };
 
 export const weekend = {
@@ -29,11 +29,11 @@ export const weekend = {
   info: "Transportul până la cabană durează aproximativ o oră. Sunt puțini km, însă după intrarea în pădure, urcarea spre Belis este mai lentă. Drumul este asfaltat.",
   mapsUrl:
     "https://www.google.com/maps/place/Cabana+Lorelin/@46.688121,23.0442143,13.25z/data=!4m6!3m5!1s0x4748e7313fd0a993:0xc6feeeac4f13a81b!8m2!3d46.7031045!4d23.0209067!16s%2Fg%2F11dxjvrt_b?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
+  wazeUrl: "https://waze.com/ul?ll=46.7031045,23.0209067&navigate=yes",
   touristUrl:
     "https://www.turistinfo.ro/calatele/cazare-calatele/casa_lorelin-c98300.html",
-  mapNote: "Deschide locația în Google Maps.",
   accommodation:
-    "Sunt 10 camere în total; două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. La sosire, doamna de la cazare va nota pe uși cine stă unde.",
+    "Sunt 12 camere în total, organizate în 10 spații de cazare; două căsuțe au câte 2 camere. La sosire, doamna de la cazare va nota pe uși cine stă unde.",
 };
 
 export type ScheduleItem = { time: string; title: string; note?: string };
@@ -109,14 +109,12 @@ export const drinksMenu: { name: string; items: string[] }[] = [
   { name: "Bere", items: ["Bere blondă", "Bere brună"] },
   {
     name: "Spirtoase",
-    items: ["Țuică", "Gin", "Whisky", "Aperol", "Vodka", "Rom"],
+    items: ["Țuică", "Gin", "Jagger", "Whisky", "Aperol", "Vodka", "Rom"],
   },
-  { name: "Cocktailuri", items: ["Aperol Spritz", "Gin tonic", "Vodka tonic"] },
   {
     name: "Băuturi non-alcoolice",
     items: ["Apă plată", "Apă minerală", "Suc", "Fructe și gheață"],
   },
-  { name: "Cafea / Ceai", items: ["Cafea", "Ceai"] },
 ];
 
 export const usefulInfo: { title: string; body: string }[] = [
@@ -127,6 +125,14 @@ export const usefulInfo: { title: string; body: string }[] = [
   {
     title: "Ce să iei cu tine",
     body: "Haine comode pentru natură, ceva mai gros pentru serile răcoroase și încălțăminte potrivită pentru drumuri de pădure.",
+  },
+  {
+    title: "Înainte de cununie",
+    body: "Înainte de ziua evenimentului suntem foarte ocupați cu pregătiri, programări și cumpărături. Joi nu putem primi vizite, iar înainte de cununie mergem la cabană să lăsăm alimente, băuturi și alte chestii.",
+  },
+  {
+    title: "Vizite și poze",
+    body: "Dacă vreți să ne vedeți sau să vedeți apartamentul, din păcate nu va fi posibil înainte de cununie. Putem să ne vedem eventual duminică, după eveniment. Poze facem doar la primărie, nu vom avea fotograf la cabană. Voi trimite mai târziu un link sigur pentru încărcat și vizualizat fotografii.",
   },
   {
     title: "Transport",
