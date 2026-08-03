@@ -26,7 +26,7 @@ export const weekend = {
   title: "Weekend la Casa Lorelin",
   period: "21 – 23 august",
   location: "Casa Lorelin",
-  info: "Transportul până la cabană durează aproximativ o oră. Sunt puțini km, însă după intrarea în pădure, urcarea spre Belis este mai lentă. Drumul este asfaltat.",
+  info: "Ziua 2 include foc de tabără și ciubăr; avem mult loc de parcat mașinile și, chiar dacă suntem multe mașini, încă ne încăpem toți. Dacă nu vii cu mașina, nu e nicio problemă — sigur găsești cu cine să mergi de la primărie la cabană și înapoi.",
   mapsUrl:
     "https://www.google.com/maps/place/Cabana+Lorelin/@46.688121,23.0442143,13.25z/data=!4m6!3m5!1s0x4748e7313fd0a993:0xc6feeeac4f13a81b!8m2!3d46.7031045!4d23.0209067!16s%2Fg%2F11dxjvrt_b?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
   wazeUrl: "https://waze.com/ul?ll=46.7031045,23.0209067&navigate=yes",
@@ -136,7 +136,15 @@ export const usefulInfo: { title: string; body: string }[] = [
   },
   {
     title: "Transport",
-    body: "Transportul de la Primăria Florești până la Casa Lorelin durează aproximativ 1h. Sunt puțini km, dar drumul devine mai îngust și merge mai greu după ce intrăm în pădure spre Belis. Totuși, drumul este asfaltat.",
+    body: "Transportul de la Primăria Florești până la Casa Lorelin durează aproximativ 1h. Drumul este asfaltat și se întâmplă lent după intrarea în pădure, dar este bun pentru mașini. Cabană este aproape de autostradă, iar duminică ajungi ușor la intrarea pe autostradă și plecarea spre casă este la fel de simplă.",
+  },
+  {
+    title: "Parcare și deplasare",
+    body: "Avem mult loc de parcat la cabană și putem găzdui toate mașinile fără problemă. Dacă nu ești cu mașina, nu e un impediment: există întotdeauna cineva care poate merge cu tine de la primărie la cabană și înapoi.",
+  },
+  {
+    title: "Restaurante în Cluj",
+    body: "Pentru cei care ajung cu o zi mai devreme, câteva recomandări bune: Roata (mâncare simplă, prețuri bune, grătare și pizza), Rochelle (restaurant mai elegant cu terasă pe apă), Bulgakov (mâncare ungurească la prețuri accesibile), Garlic (mâncare bună și băuturi interesante) și Atelierul de Pizza în Florești. Dacă pleci spre autostradă, Urbano e util pentru drive-through înainte de drum lung.",
   },
   {
     title: "Mese",
