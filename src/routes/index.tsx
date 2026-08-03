@@ -7,12 +7,20 @@ import { LeafDivider, LeafMark } from "@/components/wedding/Leaf";
 import { MapsButton } from "@/components/wedding/MapsButton";
 import { Reveal, Section } from "@/components/wedding/Section";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
   ceremony,
   ceremonyDateISO,
   couple,
   drinksMenu,
   foodMenu,
   navLinks,
+  restaurantRecommendations,
   schedule,
   usefulInfo,
   weekend,
@@ -207,6 +215,116 @@ function Index() {
                 ) : null}
               </div>
             </article>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* RESTAURANTE */}
+      <Section
+        id="restaurante"
+        eyebrow="Înainte de weekend"
+        title="Recomandări restaurante în Cluj"
+      >
+        <div className="grid gap-8 lg:grid-cols-[1.2fr,_0.8fr]">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-5">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="font-sans text-sm uppercase tracking-[0.35em] text-muted-foreground">
+                    Recomandări
+                  </p>
+                  <h2 className="mt-2 font-serif text-3xl font-light">
+                    Unde merită să mâncăm înainte de eveniment
+                  </h2>
+                </div>
+              </div>
+              <div className="mt-8 space-y-4">
+                {restaurantRecommendations.map((rest) => (
+                  <article
+                    key={rest.name}
+                    className="rounded-3xl border border-border bg-background p-5 shadow-sm"
+                  >
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="font-serif text-2xl font-light">
+                          {rest.name}
+                        </h3>
+                        <p className="mt-2 font-sans text-sm leading-relaxed text-muted-foreground">
+                          {rest.description}
+                        </p>
+                      </div>
+                      <a
+                        href={rest.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-border bg-primary/5 px-4 py-2 text-sm font-medium tracking-[0.18em] text-primary transition hover:bg-primary/10"
+                      >
+                        Harta
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-5">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="font-sans text-sm uppercase tracking-[0.35em] text-muted-foreground">
+                    Galerie de test
+                  </p>
+                  <h2 className="mt-2 font-serif text-3xl font-light">
+                    Restaurante în imagini
+                  </h2>
+                </div>
+              </div>
+              <div className="mt-8">
+                <Carousel className="relative">
+                  <CarouselContent className="flex">
+                    {[
+                      {
+                        image: heroForest,
+                        title: "Roata",
+                        caption:
+                          "Grătare și pizza bune într-un loc simplu și accesibil.",
+                      },
+                      {
+                        image: casaLorelin,
+                        title: "Rochelle",
+                        caption:
+                          "Terasa frumoasă pe apă pentru o seară relaxantă.",
+                      },
+                      {
+                        image: heroForest,
+                        title: "Garlic",
+                        caption: "Mâncare bună și băuturi interesante în Cluj.",
+                      },
+                    ].map((slide) => (
+                      <CarouselItem key={slide.title}>
+                        <div className="relative overflow-hidden rounded-[2rem] border border-border bg-secondary">
+                          <img
+                            src={slide.image}
+                            alt={slide.title}
+                            className="h-72 w-full object-cover"
+                          />
+                          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-5">
+                            <p className="font-sans text-sm uppercase tracking-[0.25em] text-muted-foreground">
+                              {slide.title}
+                            </p>
+                            <p className="mt-2 font-serif text-lg font-light text-primary-foreground">
+                              {slide.caption}
+                            </p>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="-left-10" />
+                  <CarouselNext className="-right-10" />
+                </Carousel>
+              </div>
+            </div>
           </Reveal>
         </div>
       </Section>
