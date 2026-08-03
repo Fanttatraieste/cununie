@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Local build / deploy artifacts
+.output/
+.wrangler/
+.wrangler-deploy/
+
+# Local logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

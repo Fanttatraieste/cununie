@@ -1,12 +1,20 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/integrations-supabase/client";
 
 const rsvpSchema = z.object({
   name: z.string().min(2, "Numele este obligatoriu"),
-  email: z.string().email("Adresă de email invalidă").optional().or(z.literal("")),
+  email: z
+    .string()
+    .email("Adresă de email invalidă")
+    .optional()
+    .or(z.literal("")),
   attending: z.enum(["yes", "no"]),
-  guestCount: z.coerce.number().int().min(1, "Minim 1 persoană").max(10, "Maxim 10 persoane"),
+  guestCount: z.coerce
+    .number()
+    .int()
+    .min(1, "Minim 1 persoană")
+    .max(10, "Maxim 10 persoane"),
   dietaryRestrictions: z.string().optional(),
   message: z.string().optional(),
 });
