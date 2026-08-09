@@ -128,7 +128,7 @@ export const foodMenu: MenuSection[] = [
     name: "Cină - sâmbătă",
     servedByCasaLorelin: false,
     notes: ["Include opțiuni gluten free"],
-    items: ["Carne de grătar", "Legume și salată"],
+    items: ["Grătar (porc, pui, mici, cârnați)", "Salată"],
   },
   {
     name: "Mic dejun - duminică",
