@@ -81,10 +81,10 @@ export type MenuSection = {
   name: string;
   servedByCasaLorelin?: boolean;
   notes?: string[];
-  items?: Array<string | { label: string; details?: string }>;
+  items?: Array<string | { label: string; subItems?: string[] }>;
   subSections?: Array<{
     name: string;
-    items: Array<string | { label: string; details?: string }>;
+    items: Array<string | { label: string; subItems?: string[] }>;
   }>;
 };
 
@@ -164,12 +164,27 @@ export const drinksMenu: MenuSection[] = [
       {
         name: "Alcool",
         items: [
-          "Gin — Bombay / Tanqueray / Malfy / Kapriol",
-          "Whisky — Jameson / Jack Daniels / Chivas / Ballantines",
-          "Rom — Bumbu / Bacardi Spiced / Bacardi Carta Negra",
-          "Vodka — Absolut",
-          "Aperitive — Jaggermeister / Aperol / Disaronno",
-          "Proseco — Mionetto / Moët",
+          {
+            label: "Gin",
+            subItems: ["Bombay", "Tanqueray", "Malfy", "Kapriol"],
+          },
+          {
+            label: "Whisky",
+            subItems: ["Jameson", "Jack Daniels", "Chivas", "Ballantines"],
+          },
+          {
+            label: "Rom",
+            subItems: ["Bumbu", "Bacardi Spiced", "Bacardi Carta Negra"],
+          },
+          {
+            label: "Vodka",
+            subItems: ["Absolut"],
+          },
+          {
+            label: "Aperitive",
+            subItems: ["Jaggermeister", "Aperol", "Disaronno"],
+          },
+          { label: "Proseco", subItems: ["Mionetto", "Moët"] },
         ],
       },
     ],
@@ -178,8 +193,11 @@ export const drinksMenu: MenuSection[] = [
     name: "Băuturi non-alcoolice",
     items: [
       "Apă plată / minerală",
-      "Suc — Cola / Fanta / Sprite / Schweppes / Fuzetea / Cappy",
-      "Energizant — Hell",
+      {
+        label: "Suc",
+        subItems: ["Cola", "Fanta", "Sprite", "Schweppes", "Fuzetea", "Cappy"],
+      },
+      { label: "Energizant", subItems: ["Hell"] },
       "Zeamă de castraveți",
     ],
   },

@@ -26,7 +26,7 @@ import {
   weekend,
 } from "@/content/wedding";
 
-type DrinkItem = string | { label: string; details?: string };
+type DrinkItem = string | { label: string; subItems?: string[] };
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -405,7 +405,7 @@ function Index() {
                                     <span className="inline-block w-full border-b border-dotted border-border" />
                                   </span>
                                   <span className="shrink-0 text-right font-serif text-lg font-light">
-                                    {it.details}
+                                    {it.subItems?.join(" / ")}
                                   </span>
                                 </li>
                               );
@@ -446,7 +446,7 @@ function Index() {
                             <span className="inline-block w-full border-b border-dotted border-border" />
                           </span>
                           <span className="shrink-0 text-right font-serif text-lg font-light">
-                            {it.details}
+                            {it.subItems?.join(" / ")}
                           </span>
                         </li>
                       );
