@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroForest from "@/assets/hero-forest.jpg";
+import heroUs from "@/assets/hero-us.jpeg";
 import casaLorelin from "@/assets/casa-lorelin.jpg";
 import { Countdown } from "@/components/wedding/Countdown";
 import { LeafDivider, LeafMark } from "@/components/wedding/Leaf";
@@ -75,21 +75,25 @@ function Index() {
       {/* HERO */}
       <header className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-24 text-center">
         <img
-          src={heroForest}
-          alt="Pădure de brazi în ceață, la răsărit"
+          src={heroUs}
+          alt="Vlad și Iulia"
           width={1920}
           height={1280}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.72] contrast-[1.05] saturate-[0.85]"
         />
-        <div className="absolute inset-0 bg-background/78" aria-hidden="true" />
-        <div className="relative mx-auto max-w-3xl">
-          <p className="font-sans text-sm uppercase tracking-[0.35em] text-muted-foreground">
+        <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.62))]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-3xl text-white">
+          <p className="font-sans text-sm uppercase tracking-[0.35em] text-white/80">
             21 august · Florești
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-light leading-[1.05] tracking-tight sm:text-7xl md:text-8xl">
+          <h1 className="mt-6 font-serif text-5xl font-light leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] sm:text-7xl md:text-8xl">
             {couple.names}
           </h1>
-          <p className="mt-5 font-serif text-lg italic text-accent sm:text-2xl">
+          <p className="mt-5 font-serif text-lg italic text-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">
             {couple.motto}
           </p>
 
@@ -168,7 +172,7 @@ function Index() {
         id="weekend"
         eyebrow="21 – 23 august"
         title={weekend.title}
-        subtitle="Trei zile în mijlocul pădurii, alături de cei dragi."
+        subtitle="Trei zile în pădure, cu cei dragi și multe amintiri."
         tone="muted"
       >
         <div className="grid gap-8 sm:grid-cols-2">
@@ -284,7 +288,7 @@ function Index() {
                   <CarouselContent className="flex">
                     {[
                       {
-                        image: heroForest,
+                        image: heroUs,
                         title: "Roata",
                         caption:
                           "Grătare și pizza bune într-un loc simplu și accesibil.",
@@ -296,7 +300,7 @@ function Index() {
                           "Terasa frumoasă pe apă pentru o seară relaxantă.",
                       },
                       {
-                        image: heroForest,
+                        image: heroUs,
                         title: "Garlic",
                         caption: "Mâncare bună și băuturi interesante în Cluj.",
                       },

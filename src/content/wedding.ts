@@ -26,7 +26,7 @@ export const weekend = {
   title: "Weekend la Casa Lorelin",
   period: "21 – 23 august",
   location: "Casa Lorelin",
-  info: "Ziua 2 include foc de tabără și ciubăr. Parcarea e destul de spațioasă, așa că ne încăpem cu toții chiar și dacă vin multe mașini. Dacă nu vii cu mașina, nu e nicio problemă — sigur găsești pe cineva cu care să mergi de la primărie la cabană și înapoi.",
+  info: "La cabană avem posibilitatea de a face foc de tabără și de a folosi ciubarul. Parcarea e suficient de spațioasă pentru cel puțin 10 mașini, iar detaliile despre transport sunt în secțiunea dedicată.",
   mapsUrl:
     "https://www.google.com/maps/place/Cabana+Lorelin/@46.688121,23.0442143,13.25z/data=!4m6!3m5!1s0x4748e7313fd0a993:0xc6feeeac4f13a81b!8m2!3d46.7031045!4d23.0209067!16s%2Fg%2F11dxjvrt_b?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
   wazeUrl: "https://waze.com/ul?ll=46.7031045,23.0209067&navigate=yes",
