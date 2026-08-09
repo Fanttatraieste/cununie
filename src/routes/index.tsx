@@ -80,7 +80,7 @@ function Index() {
             alt="Vlad și Iulia"
             width={1920}
             height={1280}
-            className="hero-image absolute inset-x-0 w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:h-full sm:w-full"
+            className="hero-image absolute inset-x-0 w-full object-cover object-center contrast-[1.05] saturate-[0.85] sm:inset-0 sm:h-full sm:w-full"
           />
         </div>
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
