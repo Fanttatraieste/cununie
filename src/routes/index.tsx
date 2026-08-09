@@ -383,10 +383,12 @@ function Index() {
                                     key={`${section.name}-${k}`}
                                     className="flex items-center gap-3"
                                   >
-                                    <span className="font-serif text-lg font-light">
+                                    <span className="shrink-0 font-serif text-lg font-light">
                                       {it}
                                     </span>
-                                    <span className="h-px flex-1 border-b border-dotted border-border" />
+                                    <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                                      <span className="inline-block w-full border-b border-dotted border-border" />
+                                    </span>
                                   </li>
                                 );
                               }
@@ -399,7 +401,9 @@ function Index() {
                                   <span className="shrink-0 font-serif text-lg font-light">
                                     {it.label}
                                   </span>
-                                  <span className="h-px flex-1 border-b border-dotted border-border" />
+                                  <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                                    <span className="inline-block w-full border-b border-dotted border-border" />
+                                  </span>
                                   <span className="shrink-0 text-right font-serif text-lg font-light">
                                     {it.details}
                                   </span>
@@ -420,10 +424,12 @@ function Index() {
                             key={`${cat.name}-${k}`}
                             className="flex items-center gap-3"
                           >
-                            <span className="font-serif text-lg font-light">
+                            <span className="shrink-0 font-serif text-lg font-light">
                               {it}
                             </span>
-                            <span className="h-px flex-1 border-b border-dotted border-border" />
+                            <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                              <span className="inline-block w-full border-b border-dotted border-border" />
+                            </span>
                           </li>
                         );
                       }
@@ -436,7 +442,9 @@ function Index() {
                           <span className="shrink-0 font-serif text-lg font-light">
                             {it.label}
                           </span>
-                          <span className="h-px flex-1 border-b border-dotted border-border" />
+                          <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                            <span className="inline-block w-full border-b border-dotted border-border" />
+                          </span>
                           <span className="shrink-0 text-right font-serif text-lg font-light">
                             {it.details}
                           </span>
