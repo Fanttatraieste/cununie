@@ -105,15 +105,6 @@ function Index() {
             <Countdown targetISO={ceremonyDateISO} />
           </div>
 
-          <div className="mt-6 sm:hidden">
-            <a
-              href="#cununie"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-4 py-2.5 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm transition hover:bg-white/20"
-            >
-              Vezi detalii
-            </a>
-          </div>
-
           <dl className="mt-8 hidden grid-cols-1 gap-6 border-y border-border/70 py-8 sm:mt-12 sm:grid sm:grid-cols-3">
             {[
               { k: "Data", v: ceremony.date },
@@ -130,10 +121,6 @@ function Index() {
               </div>
             ))}
           </dl>
-
-          <div className="mt-8 hidden sm:block">
-            <MapsButton url={ceremony.mapsUrl} />
-          </div>
         </div>
       </header>
 
