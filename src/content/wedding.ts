@@ -232,9 +232,9 @@ export const usefulInfo: { title: string; body: string | string[] }[] = [
 
 export const restaurantRecommendations = [
   {
-    name: "Roata",
+    name: "Roata Făget",
     description:
-      "Restaurant simplu și accesibil. Recomandăm în special preparatele făcute pe grătar, pizza și papanicii.",
+      "Restaurant simplu și accesibil. Recomandăm în special preparatele făcute pe grătar, pizza și papanașii.",
     href: "https://www.google.com/maps/place/Roata+F%C4%83get/@46.7417262,23.4978041,14z/data=!3m1!5s0x47490e162ac2ce05:0x9f9ef5806a0a5760!4m13!1m2!2m1!1sroata!3m9!1s0x47490e162cbf9ab5:0x8f0f8fcb29b2e886!5m2!4m1!1i2!8m2!3d46.7419283!4d23.5349974!15sCgVyb2F0YVoHIgVyb2F0YZIBE3JvbWFuaWFuX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFLYUU1dGR6Qk5hMnhWVFZkV1RrOVdjRk5OV0ZZMVRqSmFNMVpZWXhBQuABAPoBBQilAhA5!16s%2Fg%2F1tl1gnwl?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
   },
   {
