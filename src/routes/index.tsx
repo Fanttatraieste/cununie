@@ -74,13 +74,15 @@ function Index() {
     <main>
       {/* HERO */}
       <header className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-24 text-center">
-        <img
-          src={heroUs}
-          alt="Vlad și Iulia"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.72] contrast-[1.05] saturate-[0.85]"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={heroUs}
+            alt="Vlad și Iulia"
+            width={1920}
+            height={1280}
+            className="absolute inset-x-0 top-[12%] bottom-[12%] w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-full"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
         <div
           className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.62))]"
