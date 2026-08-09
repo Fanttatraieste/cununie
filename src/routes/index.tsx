@@ -73,14 +73,14 @@ function Index() {
   return (
     <main>
       {/* HERO */}
-      <header className="relative flex min-h-[72svh] flex-col items-center justify-center overflow-hidden px-4 py-8 text-center sm:min-h-[100svh] sm:px-5 sm:py-24">
+      <header className="hero-header relative flex flex-col items-center justify-center overflow-hidden px-4 py-8 text-center sm:min-h-[100svh] sm:px-5 sm:py-24">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroUs}
             alt="Vlad și Iulia"
             width={1920}
             height={1280}
-            className="absolute inset-x-0 top-[10%] bottom-[10%] w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-full"
+            className="hero-image absolute inset-x-0 w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:h-full sm:w-full"
           />
         </div>
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
@@ -88,7 +88,7 @@ function Index() {
           className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.62))]"
           aria-hidden="true"
         />
-        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center text-white">
+        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center text-white sm:justify-center">
           <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-white/80 sm:text-sm sm:tracking-[0.35em]">
             21 august · Florești
           </p>
@@ -110,10 +110,6 @@ function Index() {
             >
               Vezi detalii
             </a>
-          </div>
-
-          <div className="mt-8 hidden sm:block">
-            <LeafDivider className="mt-10" />
           </div>
 
           <dl className="mt-8 hidden grid-cols-1 gap-6 border-y border-border/70 py-8 sm:mt-12 sm:grid sm:grid-cols-3">
