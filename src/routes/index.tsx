@@ -211,7 +211,7 @@ function Index() {
                   {weekend.location}
                 </h3>
                 <p className="mt-2 font-sans text-base text-muted-foreground">
-                  Calațele, județul Cluj
+                  Călățele, județul Cluj
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
