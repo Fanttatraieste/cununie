@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import heroUs from "@/assets/hero-us.jpeg";
-import casaLorelin from "@/assets/casa-lorelin.jpg";
+import casaLorelin from "@/assets/casa-lorelin.webp";
 import { Countdown } from "@/components/wedding/Countdown";
 import { LeafDivider, LeafMark } from "@/components/wedding/Leaf";
 import { MapsButton } from "@/components/wedding/MapsButton";
@@ -573,7 +573,7 @@ function Index() {
           {couple.motto}
         </p>
         <p className="mt-8 font-sans text-sm uppercase tracking-[0.3em] opacity-60">
-          21 august · Primăria Florești
+          21 august
         </p>
       </footer>
     </main>
