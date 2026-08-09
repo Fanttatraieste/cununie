@@ -53,7 +53,7 @@ export const schedule: ScheduleDay[] = [
       { time: "12:00", title: "Ședință foto de grup" },
       { time: "12:30 – 14:00", title: "Drum către Casa Lorelin" },
       { time: "14:00 - 14:30", title: "Check-in" },
-      { time: "14:30", title: "Pranz" },
+      { time: "14:30", title: "Prânz" },
       { time: "19:00", title: "Cină" },
       { time: "20:30", title: "Foc de tabără" },
     ],
@@ -206,12 +206,12 @@ export const drinksMenu: MenuSection[] = [
 export const usefulInfo: { title: string; body: string | string[] }[] = [
   {
     title: "Cazare",
-    body: "Cabana dispune de 10 camere + 2 mini cabanute, care vor fi ocupate de cuplurile cu copii. Repartizarea pe camere se va face la sosire.",
+    body: "Cabană dispune de 10 camere + 2 mini cabanuțe, care vor fi ocupate de cuplurile cu copii. Repartizarea pe camere se va face la sosire.",
   },
   {
     title: "Ce să iei cu tine",
     body: [
-      "Haine comode pentru natură și încălțăminte potrivită pentru drumuri de pădure.",
+      "Haine comode pentru natură și încălțăminte potrivită pentru drumuri în pădure.",
       "Board games, cărți de joc, table / șah, mingi, rachete de badminton sau orice altceva considerați potrivit.",
       "Costum de baie — la cabană avem ciubar.",
     ],

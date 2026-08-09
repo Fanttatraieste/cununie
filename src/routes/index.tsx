@@ -396,15 +396,15 @@ function Index() {
                               return (
                                 <li
                                   key={`${section.name}-${k}`}
-                                  className="flex items-center gap-3"
+                                  className="flex flex-wrap items-center gap-x-3 gap-y-2"
                                 >
                                   <span className="shrink-0 font-serif text-lg font-light">
                                     {it.label}
                                   </span>
-                                  <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
-                                    <span className="inline-block w-full border-b border-dotted border-border" />
+                                  <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
+                                    <span className="block w-full border-b border-dotted border-border" />
                                   </span>
-                                  <span className="shrink-0 text-right font-serif text-lg font-light">
+                                  <span className="w-full font-serif text-lg font-light leading-snug sm:ml-auto sm:w-auto sm:text-right">
                                     {it.subItems?.join(" / ")}
                                   </span>
                                 </li>
@@ -437,15 +437,15 @@ function Index() {
                       return (
                         <li
                           key={`${cat.name}-${k}`}
-                          className="flex items-center gap-3"
+                          className="flex flex-wrap items-center gap-x-3 gap-y-2"
                         >
                           <span className="shrink-0 font-serif text-lg font-light">
                             {it.label}
                           </span>
-                          <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
-                            <span className="inline-block w-full border-b border-dotted border-border" />
+                          <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
+                            <span className="block w-full border-b border-dotted border-border" />
                           </span>
-                          <span className="shrink-0 text-right font-serif text-lg font-light">
+                          <span className="w-full font-serif text-lg font-light leading-snug sm:ml-auto sm:w-auto sm:text-right">
                             {it.subItems?.join(" / ")}
                           </span>
                         </li>
