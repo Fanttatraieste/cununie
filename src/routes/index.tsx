@@ -75,7 +75,7 @@ function Index() {
   return (
     <main>
       {/* HERO */}
-      <header className="hero-header relative flex flex-col items-center justify-center overflow-hidden px-4 py-8 text-center sm:min-h-[100svh] sm:px-5 sm:py-24">
+      <header className="hero-header relative flex min-h-[300px] flex-col items-center justify-center overflow-hidden px-4 py-8 text-center sm:min-h-[100svh] sm:px-5 sm:py-24">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroUs}
