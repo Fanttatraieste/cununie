@@ -80,26 +80,31 @@ export const schedule: ScheduleDay[] = [
 export const foodMenu: { name: string; note?: string; items: string[] }[] = [
   {
     name: "Mic dejun",
-    note: "09:30",
+    note: "Sâmbătă + Duminică · 09:30",
     items: ["Mic dejun servit de Casa Lorelin", "Opțiuni calde și reci"],
   },
   {
     name: "Lunch",
-    note: "14:00",
+    note: "Vineri · 14:00",
     items: ["Platouri cu mâncare", "Prăjituri separate gluten-free"],
   },
   {
     name: "Prânz",
-    note: "12:30",
+    note: "Sâmbătă · 12:30",
     items: ["Ciorbă de burtă", "Ciorbă de văcuță", "Servit de cabană"],
   },
   {
     name: "Cină",
-    note: "19:00",
+    note: "Vineri · 19:00",
     items: [
       "Sarmale fără gluten (fără vegeta)",
       "Porții separate pentru intoleranți la gluten",
     ],
+  },
+  {
+    name: "Cină",
+    note: "Sâmbătă · 19:00",
+    items: ["Carne de grătar", "Legume și salată"],
   },
 ];
 
