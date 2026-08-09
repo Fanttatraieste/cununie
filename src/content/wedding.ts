@@ -26,14 +26,14 @@ export const weekend = {
   title: "Weekend la Casa Lorelin",
   period: "21 – 23 august",
   location: "Casa Lorelin",
-  info: "Ziua 2 include foc de tabără și ciubăr; avem mult loc de parcat mașinile și, chiar dacă suntem multe mașini, încă ne încăpem toți. Dacă nu vii cu mașina, nu e nicio problemă — sigur găsești cu cine să mergi de la primărie la cabană și înapoi.",
+  info: "Ziua 2 include foc de tabără și ciubăr. Parcarea e destul de spațioasă, așa că ne încăpem cu toții chiar și dacă vin multe mașini. Dacă nu vii cu mașina, nu e nicio problemă — sigur găsești pe cineva cu care să mergi de la primărie la cabană și înapoi.",
   mapsUrl:
     "https://www.google.com/maps/place/Cabana+Lorelin/@46.688121,23.0442143,13.25z/data=!4m6!3m5!1s0x4748e7313fd0a993:0xc6feeeac4f13a81b!8m2!3d46.7031045!4d23.0209067!16s%2Fg%2F11dxjvrt_b?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D",
   wazeUrl: "https://waze.com/ul?ll=46.7031045,23.0209067&navigate=yes",
   touristUrl:
     "https://www.turistinfo.ro/calatele/cazare-calatele/casa_lorelin-c98300.html",
   accommodation:
-    "Sunt 12 camere în total, organizate în 10 spații de cazare; două căsuțe au câte 2 camere. La sosire, doamna de la cazare va nota pe uși cine stă unde.",
+    "Sunt 12 camere în total, organizate în 10 spații de cazare; două căsuțe au câte 2 camere fiecare. La sosire, doamna de la cazare vă va spune unde stă fiecare.",
 };
 
 export type ScheduleItem = { time: string; title: string; note?: string };
@@ -109,7 +109,15 @@ export const drinksMenu: { name: string; items: string[] }[] = [
   { name: "Bere", items: ["Bere blondă", "Bere brună"] },
   {
     name: "Spirtoase",
-    items: ["Țuică", "Gin", "Jagger", "Whisky", "Aperol", "Vodka", "Rom"],
+    items: [
+      "Țuică",
+      "Gin",
+      "Jaggermeister",
+      "Whisky",
+      "Aperol",
+      "Vodka",
+      "Rom",
+    ],
   },
   {
     name: "Băuturi non-alcoolice",
@@ -120,7 +128,7 @@ export const drinksMenu: { name: string; items: string[] }[] = [
 export const usefulInfo: { title: string; body: string }[] = [
   {
     title: "Cazare",
-    body: "Cazarea este la Casa Lorelin, în perioada 21 – 23 august. Sunt 10 camere în total; două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. Repartizarea pe camere se face la sosire.",
+    body: "Cazarea este la Casa Lorelin între 21 și 23 august. Sunt 10 camere în total, iar două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. Repartizarea pe camere se face la sosire.",
   },
   {
     title: "Ce să iei cu tine",
@@ -132,15 +140,15 @@ export const usefulInfo: { title: string; body: string }[] = [
   },
   {
     title: "Vizite și poze",
-    body: "Dacă vreți să ne vedeți sau să vedeți apartamentul, din păcate nu va fi posibil înainte de cununie. Putem să ne vedem eventual duminică, după eveniment. Poze facem doar la primărie, nu vom avea fotograf la cabană. Voi trimite mai târziu un link sigur pentru încărcat și vizualizat fotografii.",
+    body: "Dacă vreți să ne vedeți sau să vedeți apartamentul, din păcate nu va fi posibil înainte de cununie. Probabil ne vedem duminică, după eveniment. O să facem poze doar la primărie, nu vom avea fotograf la cabană. Voi trimite mai târziu un link sigur unde puteți încărca și vedea fotografiile.",
   },
   {
     title: "Transport",
-    body: "Transportul de la Primăria Florești până la Casa Lorelin durează aproximativ 1h. Drumul este asfaltat și se întâmplă lent după intrarea în pădure, dar este bun pentru mașini. Cabană este aproape de autostradă, iar duminică ajungi ușor la intrarea pe autostradă și plecarea spre casă este la fel de simplă.",
+    body: "Drumul de la Primăria Florești până la Casa Lorelin durează aproximativ 1 oră. E asfaltat și devine puțin mai încet după intrarea în pădure, dar e bun pentru mașini. Cabană e aproape de autostradă, iar duminică e simplu să ajungi la ieșire și să pleci spre casă.",
   },
   {
     title: "Parcare și deplasare",
-    body: "Avem mult loc de parcat la cabană și putem găzdui toate mașinile fără problemă. Dacă nu ești cu mașina, nu e un impediment: există întotdeauna cineva care poate merge cu tine de la primărie la cabană și înapoi.",
+    body: "Avem loc de parcat suficient la cabană și încăpăm toate mașinile fără probleme. Dacă nu ești cu mașina, nu e o problemă — oricum se găsește cineva care te duce de la primărie la cabană și înapoi.",
   },
   {
     title: "Restaurante în Cluj",
