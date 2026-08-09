@@ -209,14 +209,14 @@ function Index() {
                   {weekend.location}
                 </h3>
                 <p className="mt-2 font-sans text-base text-muted-foreground">
-                  Calațe, județul Cluj
+                  Calațele, județul Cluj
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
                     { k: "Data", v: weekend.period },
                     {
                       k: "Ora",
-                      v: "14:00 · 21 august — 11:00 · 23 august",
+                      v: "14:00 (vineri) — 11:00 (duminică)",
                     },
                   ].map((i) => (
                     <div
@@ -230,12 +230,6 @@ function Index() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground">
-                  {weekend.info}
-                </p>
-                <p className="mt-6 border-l-2 border-accent/50 pl-4 font-serif text-lg italic">
-                  {weekend.accommodation}
-                </p>
               </div>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <MapsButton url={weekend.mapsUrl} />
