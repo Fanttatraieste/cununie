@@ -62,18 +62,17 @@ export const schedule: ScheduleDay[] = [
     label: "Ziua 2",
     date: "22 august",
     items: [
-      { time: "09:30", title: "Mic dejun" },
-      { time: "12:30", title: "Prânz — ciorbă de burtă și ciorbă de văcuță" },
+      { time: "09:30 - 10:30", title: "Mic dejun" },
+      { time: "12:30", title: "Prânz" },
       { time: "18:30", title: "Grătar în aer liber" },
     ],
-    extra: "Nu există cină servită în ziua 2",
   },
   {
     label: "Ziua 3",
     date: "23 august",
     items: [
-      { time: "09:30", title: "Mic dejun" },
-      { time: "11:00", title: "Check-out" },
+      { time: "09:00 - 10:00", title: "Mic dejun" },
+      { time: "10:30", title: "Check-out" },
     ],
   },
 ];
