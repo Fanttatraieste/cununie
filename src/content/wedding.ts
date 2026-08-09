@@ -81,7 +81,8 @@ export type MenuSection = {
   name: string;
   servedByCasaLorelin?: boolean;
   notes?: string[];
-  items: string[];
+  items?: string[];
+  subSections?: Array<{ name: string; items: string[] }>;
 };
 
 /** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
@@ -148,23 +149,40 @@ export const foodMenu: MenuSection[] = [
 
 /** Meniu băuturi — completează listele. */
 export const drinksMenu: MenuSection[] = [
-  { name: "Vinuri", items: ["Vin roșu", "Vin alb"] },
-  { name: "Bere", items: ["Bere blondă", "Bere brună"] },
+  { name: "Vinuri", items: ["Vin roșu demisec", "Vin alb demisec"] },
+  { name: "Bere", items: ["Bere blondă", "Bere brună", "Cidru"] },
   {
-    name: "Spirtoase",
-    items: [
-      "Țuică",
-      "Gin",
-      "Jaggermeister",
-      "Whisky",
-      "Aperol",
-      "Vodka",
-      "Rom",
+    name: "Spirtuoase",
+    subSections: [
+      {
+        name: "Produse proprii",
+        items: [
+          "Țuică (produs propriu)",
+          "Vișinată (produs propriu)",
+          "Afinată (produs propriu)",
+        ],
+      },
+      {
+        name: "Alcool",
+        items: [
+          "Gin — Bombay / Tanqueray / Malfy / Kapriol",
+          "Whisky — Jameson / Jack Daniels / Chivas / Ballantines",
+          "Rom — Bumbu / Bacardi Spiced / Bacardi Carta Negra",
+          "Vodka — Absolut",
+          "Aperitive — Jaggermeister / Aperol / Disaronno",
+          "Proseco — Mionetto / Moët",
+        ],
+      },
     ],
   },
   {
     name: "Băuturi non-alcoolice",
-    items: ["Apă plată", "Apă minerală", "Suc", "Fructe și gheață"],
+    items: [
+      "Apă plată / minerală",
+      "Suc — Cola / Fanta / Sprite / Schweppes / Fuzetea / Cappy",
+      "Energizant — Hell",
+      "Zeamă de castraveți",
+    ],
   },
 ];
 

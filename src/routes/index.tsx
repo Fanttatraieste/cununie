@@ -317,7 +317,7 @@ function Index() {
                       Servit de noi
                     </div>
                   )}
-                  {meal.items.length > 0 ? (
+                  {meal.items && meal.items.length > 0 ? (
                     <ul className="flex flex-wrap gap-3">
                       {meal.items.map((it) => (
                         <li
@@ -355,7 +355,7 @@ function Index() {
       </Section>
 
       {/* BĂUTURI */}
-      <Section id="bauturi" eyebrow="Noroc" title="Meniu băuturi">
+      <Section id="bauturi" title="Meniu băuturi">
         <div className="mx-auto max-w-3xl border border-border bg-card px-6 py-10 sm:px-14 sm:py-14">
           {drinksMenu.map((cat, i) => (
             <Reveal key={cat.name} delay={i * 60}>
@@ -363,19 +363,44 @@ function Index() {
                 <h3 className="text-center font-sans text-sm uppercase tracking-[0.35em] text-accent">
                   {cat.name}
                 </h3>
-                <ul className="mt-5 space-y-3">
-                  {cat.items.map((it, k) => (
-                    <li
-                      key={cat.name + k}
-                      className="flex items-baseline gap-3"
-                    >
-                      <span className="font-serif text-lg font-light">
-                        {it}
-                      </span>
-                      <span className="h-px flex-1 border-b border-dotted border-border" />
-                    </li>
-                  ))}
-                </ul>
+                {cat.subSections && cat.subSections.length > 0 ? (
+                  <div className="mt-6 space-y-6">
+                    {cat.subSections.map((section) => (
+                      <div key={section.name}>
+                        <h4 className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                          {section.name}
+                        </h4>
+                        <ul className="mt-3 space-y-3">
+                          {section.items.map((it, k) => (
+                            <li
+                              key={section.name + k}
+                              className="flex items-baseline gap-3"
+                            >
+                              <span className="font-serif text-lg font-light">
+                                {it}
+                              </span>
+                              <span className="h-px flex-1 border-b border-dotted border-border" />
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ul className="mt-5 space-y-3">
+                    {cat.items?.map((it, k) => (
+                      <li
+                        key={cat.name + k}
+                        className="flex items-baseline gap-3"
+                      >
+                        <span className="font-serif text-lg font-light">
+                          {it}
+                        </span>
+                        <span className="h-px flex-1 border-b border-dotted border-border" />
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </Reveal>
           ))}
