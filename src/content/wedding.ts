@@ -77,15 +77,20 @@ export const schedule: ScheduleDay[] = [
   },
 ];
 
-export type MenuSection = { name: string; notes?: string[]; items: string[] };
+export type MenuSection = {
+  name: string;
+  servedByCasaLorelin?: boolean;
+  notes?: string[];
+  items: string[];
+};
 
 /** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
 export const foodMenu: MenuSection[] = [
   {
     name: "Mic dejun",
+    servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
     items: [
-      "Servit de Casa Lorelin",
       "Oua",
       "Brânzeturi",
       "Mezeluri",
@@ -97,13 +102,14 @@ export const foodMenu: MenuSection[] = [
   },
   {
     name: "Lunch",
+    servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
-    items: ["Servit de Casa Lorelin", "Bufet suedez cu preparate reci"],
+    items: ["Bufet suedez cu preparate reci"],
   },
   {
     name: "Prânz",
     notes: ["Include opțiuni gluten free"],
-    items: ["Ciorbă de burtă", "Ciorbă de văcuță", "Servit de cabană"],
+    items: ["Ciorbă de burtă", "Ciorbă de văcuță"],
   },
   {
     name: "Cină",

@@ -307,33 +307,43 @@ function Index() {
                   </h3>
                 </div>
                 <LeafDivider className="mt-5" />
-                {meal.notes && meal.notes.length > 0 ? (
-                  <div className="mt-6 rounded-2xl border border-dashed border-border/70 bg-background/70 px-4 py-3">
-                    <ul className="space-y-2">
-                      {meal.notes.map((note) => (
+                <div className="mt-6 space-y-4">
+                  {meal.servedByCasaLorelin ? (
+                    <div className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-accent">
+                      Servit de Casa Lorelin
+                    </div>
+                  ) : null}
+                  {meal.items.length > 0 ? (
+                    <ul className="flex flex-wrap gap-3">
+                      {meal.items.map((it) => (
                         <li
-                          key={note}
-                          className="font-serif text-base italic leading-relaxed text-muted-foreground"
+                          key={it}
+                          className="rounded-full border border-border bg-background/70 px-4 py-2 font-serif text-base font-light"
                         >
-                          {note}
+                          {it}
                         </li>
                       ))}
                     </ul>
-                  </div>
-                ) : null}
-                {meal.items.length > 0 ? (
-                  <ul className="mt-6 space-y-3">
-                    {meal.items.map((it) => (
-                      <li key={it} className="font-serif text-lg font-light">
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="mt-6 font-sans text-sm italic text-muted-foreground">
-                    Preparatele vor fi adăugate în curând.
-                  </p>
-                )}
+                  ) : (
+                    <p className="font-sans text-sm italic text-muted-foreground">
+                      Preparatele vor fi adăugate în curând.
+                    </p>
+                  )}
+                  {meal.notes && meal.notes.length > 0 ? (
+                    <div className="rounded-2xl border border-dashed border-border/70 bg-background/70 px-4 py-3">
+                      <ul className="space-y-2">
+                        {meal.notes.map((note) => (
+                          <li
+                            key={note}
+                            className="font-serif text-base italic leading-relaxed text-muted-foreground"
+                          >
+                            {note}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
               </article>
             </Reveal>
           ))}
