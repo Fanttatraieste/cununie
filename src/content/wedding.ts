@@ -211,7 +211,6 @@ export const restaurantRecommendations = [
 export const navLinks = [
   { href: "#cununie", label: "Cununia civilă" },
   { href: "#weekend", label: "Casa Lorelin" },
-  { href: "#restaurante", label: "Restaurante" },
   { href: "#program", label: "Program" },
   { href: "#meniu", label: "Meniu" },
   { href: "#bauturi", label: "Băuturi" },
