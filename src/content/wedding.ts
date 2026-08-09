@@ -77,26 +77,37 @@ export const schedule: ScheduleDay[] = [
   },
 ];
 
-/** Meniu mâncare — adaugă preparatele în listele `items`. */
-export const foodMenu: { name: string; note?: string; items: string[] }[] = [
+export type MenuSection = { name: string; notes?: string[]; items: string[] };
+
+/** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
+export const foodMenu: MenuSection[] = [
   {
     name: "Mic dejun",
-    note: "Sâmbătă + Duminică · 09:30",
-    items: ["Mic dejun servit de Casa Lorelin", "Opțiuni calde și reci"],
+    notes: ["Include opțiuni gluten free"],
+    items: [
+      "Servit de Casa Lorelin",
+      "Oua",
+      "Brânzeturi",
+      "Mezeluri",
+      "Pâine",
+      "Fructe",
+      "Cafea și ceai",
+      "etc",
+    ],
   },
   {
     name: "Lunch",
-    note: "Vineri · 14:00",
-    items: ["Platouri cu mâncare", "Prăjituri separate gluten-free"],
+    notes: ["Include opțiuni gluten free"],
+    items: ["Servit de Casa Lorelin", "Bufet suedez cu preparate reci"],
   },
   {
     name: "Prânz",
-    note: "Sâmbătă · 12:30",
+    notes: ["Include opțiuni gluten free"],
     items: ["Ciorbă de burtă", "Ciorbă de văcuță", "Servit de cabană"],
   },
   {
     name: "Cină",
-    note: "Vineri · 19:00",
+    notes: ["Include opțiuni gluten free"],
     items: [
       "Sarmale fără gluten (fără vegeta)",
       "Porții separate pentru intoleranți la gluten",
@@ -104,13 +115,13 @@ export const foodMenu: { name: string; note?: string; items: string[] }[] = [
   },
   {
     name: "Cină",
-    note: "Sâmbătă · 19:00",
+    notes: ["Include opțiuni gluten free"],
     items: ["Carne de grătar", "Legume și salată"],
   },
 ];
 
 /** Meniu băuturi — completează listele. */
-export const drinksMenu: { name: string; items: string[] }[] = [
+export const drinksMenu: MenuSection[] = [
   { name: "Vinuri", items: ["Vin roșu", "Vin alb"] },
   { name: "Bere", items: ["Bere blondă", "Bere brună"] },
   {

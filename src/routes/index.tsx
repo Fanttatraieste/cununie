@@ -296,7 +296,7 @@ function Index() {
       </Section>
 
       {/* MENIU */}
-      <Section id="meniu" eyebrow="La masă" title="Meniu" tone="muted">
+      <Section id="meniu" title="Meniu" tone="muted">
         <div className="grid gap-6 sm:grid-cols-2">
           {foodMenu.map((meal, i) => (
             <Reveal key={meal.name} delay={i * 80}>
@@ -305,13 +305,22 @@ function Index() {
                   <h3 className="font-serif text-2xl font-light">
                     {meal.name}
                   </h3>
-                  {meal.note ? (
-                    <span className="font-sans text-sm uppercase tracking-[0.28em] text-muted-foreground">
-                      {meal.note}
-                    </span>
-                  ) : null}
                 </div>
                 <LeafDivider className="mt-5" />
+                {meal.notes && meal.notes.length > 0 ? (
+                  <div className="mt-6 rounded-2xl border border-dashed border-border/70 bg-background/70 px-4 py-3">
+                    <ul className="space-y-2">
+                      {meal.notes.map((note) => (
+                        <li
+                          key={note}
+                          className="font-serif text-base italic leading-relaxed text-muted-foreground"
+                        >
+                          {note}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
                 {meal.items.length > 0 ? (
                   <ul className="mt-6 space-y-3">
                     {meal.items.map((it) => (
