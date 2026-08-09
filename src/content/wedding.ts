@@ -206,39 +206,23 @@ export const drinksMenu: MenuSection[] = [
 export const usefulInfo: { title: string; body: string }[] = [
   {
     title: "Cazare",
-    body: "Cazarea este la Casa Lorelin între 21 și 23 august. Sunt 10 camere în total, iar două căsuțe mai spațioase sunt rezervate pentru cele două familii care vin cu câte 2 copii. Repartizarea pe camere se face la sosire.",
+    body: "Cabana dispune de 10 camere + 2 mini cabanute, care vor fi ocupate de cuplurile cu copii. Repartizarea pe camere se va face la sosire.",
   },
   {
     title: "Ce să iei cu tine",
-    body: "Haine comode pentru natură, ceva mai gros pentru serile răcoroase și încălțăminte potrivită pentru drumuri de pădure.",
-  },
-  {
-    title: "Înainte de cununie",
-    body: "Înainte de ziua evenimentului suntem foarte ocupați cu pregătiri, programări și cumpărături. Joi nu putem primi vizite, iar înainte de cununie mergem la cabană să lăsăm alimente, băuturi și alte chestii.",
-  },
-  {
-    title: "Vizite și poze",
-    body: "Dacă vreți să ne vedeți sau să vedeți apartamentul, din păcate nu va fi posibil înainte de cununie. Probabil ne vedem duminică, după eveniment. O să facem poze doar la primărie, nu vom avea fotograf la cabană. Voi trimite mai târziu un link sigur unde puteți încărca și vedea fotografiile.",
+    body: "Haine comode pentru natură, ceva mai gros pentru serile răcoroase și încălțăminte potrivită pentru drumuri de pădure. Vă invităm să aduceți board games, cărți de joc, table / șah, mingi, rachete de badminton sau orice altceva considerați potrivit.",
   },
   {
     title: "Transport",
-    body: "Drumul de la Primăria Florești până la Casa Lorelin durează aproximativ 1 oră. E asfaltat și devine puțin mai încet după intrarea în pădure, dar e bun pentru mașini. Cabană e aproape de autostradă, iar duminică e simplu să ajungi la ieșire și să pleci spre casă.",
+    body: "Transportul de la Primăria Florești până la Casa Lorelin se va face individual și durează aproximativ 1 oră. Dacă aveți nevoie de ajutor cu mașina, vă rugăm să ne contactați în avans.",
   },
   {
-    title: "Parcare și deplasare",
-    body: "Avem loc de parcat suficient la cabană și încăpăm toate mașinile fără probleme. Dacă nu ești cu mașina, nu e o problemă — oricum se găsește cineva care te duce de la primărie la cabană și înapoi.",
-  },
-  {
-    title: "Restaurante în Cluj",
-    body: "Pentru cei care ajung cu o zi mai devreme, câteva recomandări bune: Roata (mâncare simplă, prețuri bune, grătare și pizza), Rochelle (restaurant mai elegant cu terasă pe apă), Bulgakov (mâncare ungurească la prețuri accesibile), Garlic (mâncare bună și băuturi interesante) și Atelierul de Pizza în Florești. Dacă pleci spre autostradă, Urbano e util pentru drive-through înainte de drum lung.",
-  },
-  {
-    title: "Mese",
-    body: "Micul dejun și prânzul din ziua 2 sunt servite de cabană, la fel ca cina din ziua 1. La sosire, la prânz, vom avea platouri cu mâncare și prăjituri, iar seara avem sarmale. În ziua 2 facem grătar și nu avem cină servită.",
+    title: "Parcare",
+    body: "Cabana dispune de parcare privată îngrădită.",
   },
   {
     title: "Alergii alimentare",
-    body: "Avem 3 persoane intolerante la gluten. Prăjiturile și platourile gluten-free sunt separate și celelalte persoane sunt rugate să nu le consume. Sarmalele și ciorbele sunt pregătite fără gluten, inclusiv fără vegeta.",
+    body: "Vă rugăm să ne contactați în avans dacă aveți alergii alimentare. Vom avea mâncare și prăjituri gluten free pe care vă rugăm să le lăsați disponibile persoanelor intolerante.",
   },
 ];
 
