@@ -253,7 +253,7 @@ function Index() {
       </Section>
 
       {/* PROGRAM */}
-      <Section id="program" eyebrow="Trei zile" title="Programul evenimentului">
+      <Section id="program" title="Program">
         <div className="space-y-14">
           {schedule.map((day, di) => (
             <Reveal key={day.label} delay={di * 80}>

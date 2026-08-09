@@ -50,10 +50,12 @@ export const schedule: ScheduleDay[] = [
     date: "21 august",
     items: [
       { time: "11:30", title: "Cununia civilă" },
-      { time: "12:00", title: "Poze" },
+      { time: "12:00", title: "Ședință foto de grup" },
       { time: "12:30 – 14:00", title: "Drum către Casa Lorelin" },
-      { time: "14:00", title: "Lunch — platouri și prăjituri" },
-      { time: "19:00", title: "Cină — sarmale" },
+      { time: "14:00 - 14:30", title: "Check-in" },
+      { time: "14:30", title: "Pranz" },
+      { time: "19:00", title: "Cină" },
+      { time: "20:30", title: "Foc de tabără" },
     ],
   },
   {
