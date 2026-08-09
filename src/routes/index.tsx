@@ -410,7 +410,7 @@ function Index() {
                                     <span className="min-w-[2.5rem] flex-1 sm:min-w-[4rem]">
                                       <span className="block w-full border-b border-dotted border-border" />
                                     </span>
-                                    <div className="flex shrink-0 min-w-0 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
+                                    <div className="ml-auto flex min-w-0 flex-2 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
                                       {(it.subItems ?? []).map(
                                         (subItem, subIndex) => (
                                           <span
