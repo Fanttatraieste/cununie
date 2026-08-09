@@ -475,9 +475,23 @@ function Index() {
                   <h3 className="mt-5 font-serif text-2xl font-light">
                     {info.title}
                   </h3>
-                  <p className="mt-3 font-sans text-base leading-relaxed text-muted-foreground">
-                    {info.body}
-                  </p>
+                  {Array.isArray(info.body) ? (
+                    <ul className="mt-3 space-y-2">
+                      {info.body.map((item, itemIndex) => (
+                        <li
+                          key={`${info.title}-${itemIndex}`}
+                          className="flex gap-2 font-sans text-base leading-relaxed text-muted-foreground"
+                        >
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-3 font-sans text-base leading-relaxed text-muted-foreground">
+                      {info.body}
+                    </p>
+                  )}
                 </article>
               </Reveal>
             ))}

@@ -203,14 +203,18 @@ export const drinksMenu: MenuSection[] = [
   },
 ];
 
-export const usefulInfo: { title: string; body: string }[] = [
+export const usefulInfo: { title: string; body: string | string[] }[] = [
   {
     title: "Cazare",
     body: "Cabana dispune de 10 camere + 2 mini cabanute, care vor fi ocupate de cuplurile cu copii. Repartizarea pe camere se va face la sosire.",
   },
   {
     title: "Ce să iei cu tine",
-    body: "Haine comode pentru natură, ceva mai gros pentru serile răcoroase și încălțăminte potrivită pentru drumuri de pădure. Vă invităm să aduceți board games, cărți de joc, table / șah, mingi, rachete de badminton sau orice altceva considerați potrivit.",
+    body: [
+      "Haine comode pentru natură și încălțăminte potrivită pentru drumuri de pădure.",
+      "Board games, cărți de joc, table / șah, mingi, rachete de badminton sau orice altceva considerați potrivit.",
+      "Costum de baie — la cabană avem ciubar.",
+    ],
   },
   {
     title: "Transport",
