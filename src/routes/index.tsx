@@ -402,15 +402,15 @@ function Index() {
                                 return (
                                   <li
                                     key={`${section.name}-${k}`}
-                                    className="flex items-start gap-x-3 gap-y-2"
+                                    className="flex items-baseline gap-x-3 gap-y-2"
                                   >
-                                    <span className="shrink-0 pt-[0.15rem] font-serif text-lg font-light leading-tight">
+                                    <span className="shrink-0 font-serif text-lg font-light leading-tight">
                                       {it.label}
                                     </span>
-                                    <span className="min-w-[2.5rem] flex-1 pt-[0.95rem] sm:min-w-[4rem]">
+                                    <span className="min-w-[2.5rem] flex-1 sm:min-w-[4rem]">
                                       <span className="block w-full border-b border-dotted border-border" />
                                     </span>
-                                    <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 pt-[0.15rem] text-right">
+                                    <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
                                       {(it.subItems ?? []).map(
                                         (subItem, subIndex) => (
                                           <span
@@ -456,15 +456,15 @@ function Index() {
                         return (
                           <li
                             key={`${cat.name}-${k}`}
-                            className="flex items-start gap-x-3 gap-y-2"
+                            className="flex items-baseline gap-x-3 gap-y-2"
                           >
-                            <span className="shrink-0 pt-[0.15rem] font-serif text-lg font-light leading-tight">
+                            <span className="shrink-0 font-serif text-lg font-light leading-tight">
                               {it.label}
                             </span>
-                            <span className="min-w-[2.5rem] flex-1 pt-[0.95rem] sm:min-w-[4rem]">
+                            <span className="min-w-[2.5rem] flex-1 sm:min-w-[4rem]">
                               <span className="block w-full border-b border-dotted border-border" />
                             </span>
-                            <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 pt-[0.15rem] text-right">
+                            <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
                               {(it.subItems ?? []).map((subItem, subIndex) => (
                                 <span
                                   key={`${it.label}-${subIndex}`}
