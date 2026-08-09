@@ -90,7 +90,7 @@ function Index() {
         />
         <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center text-white sm:justify-center">
           <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-white/80 sm:text-sm sm:tracking-[0.35em]">
-            21 august · Florești
+            21 august
           </p>
           <h1 className="mt-4 font-serif text-4xl font-light leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] sm:mt-6 sm:text-7xl md:text-8xl">
             {couple.names}
@@ -138,12 +138,17 @@ function Index() {
       <Nav />
 
       {/* CUNUNIA CIVILĂ */}
-      <Section id="cununie" eyebrow="Vă așteptăm" title={ceremony.title}>
+      <Section id="cununie" title={ceremony.title}>
         <div className="grid gap-8 sm:grid-cols-2">
           <Reveal>
             <article className="flex h-full flex-col justify-between border border-border bg-card p-8 sm:p-10">
               <div>
-                <LeafMark className="h-6 w-6 text-primary/70" />
+                <div className="flex items-center gap-2">
+                  <LeafMark className="h-6 w-6 text-primary/70" />
+                  <span className="font-sans text-sm uppercase tracking-[0.28em] text-muted-foreground">
+                    Locație:
+                  </span>
+                </div>
                 <h3 className="mt-6 font-serif text-3xl font-light">
                   {ceremony.location}
                 </h3>
@@ -179,13 +184,7 @@ function Index() {
       </Section>
 
       {/* CASA LORELIN */}
-      <Section
-        id="weekend"
-        eyebrow="21 – 23 august"
-        title={weekend.title}
-        subtitle="Trei zile în pădure, cu cei dragi și multe amintiri."
-        tone="muted"
-      >
+      <Section id="weekend" title={weekend.title} tone="muted">
         <div className="grid gap-8 sm:grid-cols-2">
           <Reveal>
             <img
@@ -200,12 +199,37 @@ function Index() {
           <Reveal delay={120}>
             <article className="flex h-full flex-col justify-between border border-border bg-card p-8 sm:p-10">
               <div>
-                <h3 className="font-serif text-3xl font-light">
+                <div className="flex items-center gap-2">
+                  <LeafMark className="h-6 w-6 text-primary/70" />
+                  <span className="font-sans text-sm uppercase tracking-[0.28em] text-muted-foreground">
+                    Locație:
+                  </span>
+                </div>
+                <h3 className="mt-6 font-serif text-3xl font-light">
                   {weekend.location}
                 </h3>
-                <p className="mt-2 font-sans text-sm uppercase tracking-[0.22em] text-muted-foreground">
-                  {weekend.period}
+                <p className="mt-2 font-sans text-base text-muted-foreground">
+                  Calațe, județul Cluj
                 </p>
+                <div className="mt-8 space-y-4">
+                  {[
+                    { k: "Data", v: weekend.period },
+                    {
+                      k: "Ora",
+                      v: "14:00 · 21 august — 11:00 · 23 august",
+                    },
+                  ].map((i) => (
+                    <div
+                      key={i.k}
+                      className="flex items-baseline justify-between border-b border-border pb-3"
+                    >
+                      <span className="font-sans text-sm uppercase tracking-[0.28em] text-muted-foreground">
+                        {i.k}
+                      </span>
+                      <span className="font-serif text-xl">{i.v}</span>
+                    </div>
+                  ))}
+                </div>
                 <p className="mt-6 font-sans text-base leading-relaxed text-muted-foreground">
                   {weekend.info}
                 </p>
