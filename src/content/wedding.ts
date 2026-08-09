@@ -87,7 +87,7 @@ export type MenuSection = {
 /** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
 export const foodMenu: MenuSection[] = [
   {
-    name: "Pranz - vineri",
+    name: "Prânz - vineri",
     servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
     items: ["Bufet suedez cu preparate reci"],
@@ -103,7 +103,7 @@ export const foodMenu: MenuSection[] = [
     servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
     items: [
-      "Oua",
+      "Ouă",
       "Brânzeturi",
       "Mezeluri",
       "Pâine",
@@ -129,6 +129,20 @@ export const foodMenu: MenuSection[] = [
     servedByCasaLorelin: false,
     notes: ["Include opțiuni gluten free"],
     items: ["Carne de grătar", "Legume și salată"],
+  },
+  {
+    name: "Mic dejun - duminică",
+    servedByCasaLorelin: true,
+    notes: ["Include opțiuni gluten free"],
+    items: [
+      "Ouă",
+      "Brânzeturi",
+      "Mezeluri",
+      "Pâine",
+      "Fructe",
+      "Cafea și ceai",
+      "etc",
+    ],
   },
 ];
 
