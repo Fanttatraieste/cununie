@@ -73,14 +73,14 @@ function Index() {
   return (
     <main>
       {/* HERO */}
-      <header className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-24 text-center">
+      <header className="relative flex min-h-[72svh] flex-col items-center justify-center overflow-hidden px-4 py-8 text-center sm:min-h-[100svh] sm:px-5 sm:py-24">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroUs}
             alt="Vlad și Iulia"
             width={1920}
             height={1280}
-            className="absolute inset-x-0 top-[12%] bottom-[12%] w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-full"
+            className="absolute inset-x-0 top-[10%] bottom-[10%] w-full object-cover object-center brightness-[0.72] contrast-[1.05] saturate-[0.85] sm:inset-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-full"
           />
         </div>
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
@@ -88,39 +88,52 @@ function Index() {
           className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18),rgba(0,0,0,0.62))]"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-3xl text-white">
-          <p className="font-sans text-sm uppercase tracking-[0.35em] text-white/80">
+        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center text-white">
+          <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-white/80 sm:text-sm sm:tracking-[0.35em]">
             21 august · Florești
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-light leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] sm:text-7xl md:text-8xl">
+          <h1 className="mt-4 font-serif text-4xl font-light leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.7)] sm:mt-6 sm:text-7xl md:text-8xl">
             {couple.names}
           </h1>
-          <p className="mt-5 font-serif text-lg italic text-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">
+          <p className="mt-3 font-serif text-base italic text-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:mt-5 sm:text-2xl">
             {couple.motto}
           </p>
 
-          <LeafDivider className="mt-10" />
-
-          <div className="mt-10">
+          <div className="mt-6 sm:mt-10">
             <Countdown targetISO={ceremonyDateISO} />
           </div>
 
-          <dl className="mt-12 grid grid-cols-1 gap-6 border-y border-border py-8 sm:grid-cols-3">
+          <div className="mt-6 sm:hidden">
+            <a
+              href="#cununie"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-4 py-2.5 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-white/90 backdrop-blur-sm transition hover:bg-white/20"
+            >
+              Vezi detalii
+            </a>
+          </div>
+
+          <div className="mt-8 hidden sm:block">
+            <LeafDivider className="mt-10" />
+          </div>
+
+          <dl className="mt-8 hidden grid-cols-1 gap-6 border-y border-border/70 py-8 sm:mt-12 sm:grid sm:grid-cols-3">
             {[
               { k: "Data", v: ceremony.date },
               { k: "Ora", v: ceremony.time },
               { k: "Locația", v: ceremony.location },
             ].map((i) => (
               <div key={i.k}>
-                <dt className="font-sans text-sm uppercase tracking-[0.3em] text-muted-foreground">
+                <dt className="font-sans text-sm uppercase tracking-[0.3em] text-white/70">
                   {i.k}
                 </dt>
-                <dd className="mt-2 font-serif text-2xl font-light">{i.v}</dd>
+                <dd className="mt-2 font-serif text-2xl font-light text-white">
+                  {i.v}
+                </dd>
               </div>
             ))}
           </dl>
 
-          <div className="mt-10">
+          <div className="mt-8 hidden sm:block">
             <MapsButton url={ceremony.mapsUrl} />
           </div>
         </div>
