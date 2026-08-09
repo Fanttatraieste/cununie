@@ -365,7 +365,7 @@ function Index() {
             return (
               <Reveal key={cat.name} delay={i * 60}>
                 <div
-                  className={`mb-10 last:mb-0 ${isNonAlcoholic ? "mt-[5px]" : ""}`}
+                  className={`mb-10 last:mb-0 ${isNonAlcoholic ? "mt-[10px]" : ""}`}
                 >
                   <h3 className="text-center font-sans text-sm uppercase tracking-[0.35em] text-accent">
                     {cat.name}
@@ -410,7 +410,7 @@ function Index() {
                                     <span className="min-w-[2.5rem] flex-1 sm:min-w-[4rem]">
                                       <span className="block w-full border-b border-dotted border-border" />
                                     </span>
-                                    <div className="ml-auto flex min-w-0 flex-2 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
+                                    <div className="flex shrink-0 min-w-0 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
                                       {(it.subItems ?? []).map(
                                         (subItem, subIndex) => (
                                           <span
@@ -464,7 +464,7 @@ function Index() {
                             <span className="min-w-[2.5rem] flex-1 sm:min-w-[4rem]">
                               <span className="block w-full border-b border-dotted border-border" />
                             </span>
-                            <div className="ml-auto flex min-w-0 flex-2 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
+                            <div className="flex shrink-0 min-w-0 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
                               {(it.subItems ?? []).map((subItem, subIndex) => (
                                 <span
                                   key={`${it.label}-${subIndex}`}
