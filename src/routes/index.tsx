@@ -312,7 +312,11 @@ function Index() {
                     <div className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-accent">
                       Servit de Casa Lorelin
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="inline-flex items-center rounded-full border border-border/70 bg-background/70 px-3 py-1.5 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-muted-foreground">
+                      Servit de noi
+                    </div>
+                  )}
                   {meal.items.length > 0 ? (
                     <ul className="flex flex-wrap gap-3">
                       {meal.items.map((it) => (

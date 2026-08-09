@@ -87,7 +87,19 @@ export type MenuSection = {
 /** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
 export const foodMenu: MenuSection[] = [
   {
-    name: "Mic dejun",
+    name: "Pranz - vineri",
+    servedByCasaLorelin: true,
+    notes: ["Include opțiuni gluten free"],
+    items: ["Bufet suedez cu preparate reci"],
+  },
+  {
+    name: "Cină - vineri",
+    servedByCasaLorelin: true,
+    notes: ["Include opțiuni gluten free"],
+    items: ["Sarmale cu mămăliguță și smântână"],
+  },
+  {
+    name: "Mic dejun - sâmbătă",
     servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
     items: [
@@ -101,26 +113,20 @@ export const foodMenu: MenuSection[] = [
     ],
   },
   {
-    name: "Lunch",
+    name: "Prânz - sâmbătă",
     servedByCasaLorelin: true,
     notes: ["Include opțiuni gluten free"],
-    items: ["Bufet suedez cu preparate reci"],
-  },
-  {
-    name: "Prânz",
-    notes: ["Include opțiuni gluten free"],
-    items: ["Ciorbă de burtă", "Ciorbă de văcuță"],
-  },
-  {
-    name: "Cină",
-    notes: ["Include opțiuni gluten free"],
     items: [
-      "Sarmale fără gluten (fără vegeta)",
-      "Porții separate pentru intoleranți la gluten",
+      "Ciorbă de burtă",
+      "Ciorbă de văcuță",
+      "Pâine",
+      "Smântână",
+      "Ardei iute",
     ],
   },
   {
-    name: "Cină",
+    name: "Cină - sâmbătă",
+    servedByCasaLorelin: false,
     notes: ["Include opțiuni gluten free"],
     items: ["Carne de grătar", "Legume și salată"],
   },
