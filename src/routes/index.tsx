@@ -26,6 +26,8 @@ import {
   weekend,
 } from "@/content/wedding";
 
+type DrinkItem = string | { label: string; details?: string };
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -319,12 +321,12 @@ function Index() {
                   )}
                   {meal.items && meal.items.length > 0 ? (
                     <ul className="flex flex-wrap gap-3">
-                      {meal.items.map((it) => (
+                      {meal.items.map((it, index) => (
                         <li
-                          key={it}
+                          key={`${meal.name}-${index}`}
                           className="rounded-full border border-border bg-background/70 px-4 py-2 font-serif text-base font-light"
                         >
-                          {it}
+                          {typeof it === "string" ? it : it.label}
                         </li>
                       ))}
                     </ul>
@@ -365,40 +367,82 @@ function Index() {
                 </h3>
                 {cat.subSections && cat.subSections.length > 0 ? (
                   <div className="mt-6 space-y-6">
-                    {cat.subSections.map((section) => (
-                      <div key={section.name}>
-                        <h4 className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                          {section.name}
-                        </h4>
-                        <ul className="mt-3 space-y-3">
-                          {section.items.map((it, k) => (
-                            <li
-                              key={section.name + k}
-                              className="flex items-baseline gap-3"
-                            >
-                              <span className="font-serif text-lg font-light">
-                                {it}
-                              </span>
-                              <span className="h-px flex-1 border-b border-dotted border-border" />
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    {cat.subSections.map((section) => {
+                      const sectionItems = (section.items ?? []) as DrinkItem[];
+
+                      return (
+                        <div key={section.name}>
+                          <h4 className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                            {section.name}
+                          </h4>
+                          <ul className="mt-3 space-y-3">
+                            {sectionItems.map((it: DrinkItem, k: number) => {
+                              if (typeof it === "string") {
+                                return (
+                                  <li
+                                    key={`${section.name}-${k}`}
+                                    className="flex items-center gap-3"
+                                  >
+                                    <span className="font-serif text-lg font-light">
+                                      {it}
+                                    </span>
+                                    <span className="h-px flex-1 border-b border-dotted border-border" />
+                                  </li>
+                                );
+                              }
+
+                              return (
+                                <li
+                                  key={`${section.name}-${k}`}
+                                  className="flex items-center gap-3"
+                                >
+                                  <span className="shrink-0 font-serif text-lg font-light">
+                                    {it.label}
+                                  </span>
+                                  <span className="h-px flex-1 border-b border-dotted border-border" />
+                                  <span className="shrink-0 text-right font-serif text-lg font-light">
+                                    {it.details}
+                                  </span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      );
+                    })}
                   </div>
                 ) : (
                   <ul className="mt-5 space-y-3">
-                    {cat.items?.map((it, k) => (
-                      <li
-                        key={cat.name + k}
-                        className="flex items-baseline gap-3"
-                      >
-                        <span className="font-serif text-lg font-light">
-                          {it}
-                        </span>
-                        <span className="h-px flex-1 border-b border-dotted border-border" />
-                      </li>
-                    ))}
+                    {(cat.items ?? []).map((it: DrinkItem, k: number) => {
+                      if (typeof it === "string") {
+                        return (
+                          <li
+                            key={`${cat.name}-${k}`}
+                            className="flex items-center gap-3"
+                          >
+                            <span className="font-serif text-lg font-light">
+                              {it}
+                            </span>
+                            <span className="h-px flex-1 border-b border-dotted border-border" />
+                          </li>
+                        );
+                      }
+
+                      return (
+                        <li
+                          key={`${cat.name}-${k}`}
+                          className="flex items-center gap-3"
+                        >
+                          <span className="shrink-0 font-serif text-lg font-light">
+                            {it.label}
+                          </span>
+                          <span className="h-px flex-1 border-b border-dotted border-border" />
+                          <span className="shrink-0 text-right font-serif text-lg font-light">
+                            {it.details}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
               </div>

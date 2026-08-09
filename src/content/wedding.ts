@@ -81,8 +81,11 @@ export type MenuSection = {
   name: string;
   servedByCasaLorelin?: boolean;
   notes?: string[];
-  items?: string[];
-  subSections?: Array<{ name: string; items: string[] }>;
+  items?: Array<string | { label: string; details?: string }>;
+  subSections?: Array<{
+    name: string;
+    items: Array<string | { label: string; details?: string }>;
+  }>;
 };
 
 /** Meniu mâncare — adaugă preparatele în listele `items` și notele în `notes`. */
@@ -149,18 +152,14 @@ export const foodMenu: MenuSection[] = [
 
 /** Meniu băuturi — completează listele. */
 export const drinksMenu: MenuSection[] = [
-  { name: "Vinuri", items: ["Vin roșu demisec", "Vin alb demisec"] },
+  { name: "Vinuri", items: ["Vin roșu (demisec)", "Vin alb (demisec)"] },
   { name: "Bere", items: ["Bere blondă", "Bere brună", "Cidru"] },
   {
-    name: "Spirtuoase",
+    name: "Spirtoase",
     subSections: [
       {
         name: "Produse proprii",
-        items: [
-          "Țuică (produs propriu)",
-          "Vișinată (produs propriu)",
-          "Afinată (produs propriu)",
-        ],
+        items: ["Țuică", "Vișinată", "Afinată", "Zmeurată"],
       },
       {
         name: "Alcool",
