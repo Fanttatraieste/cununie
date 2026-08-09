@@ -184,7 +184,7 @@ export const drinksMenu: MenuSection[] = [
             label: "Aperitive",
             subItems: ["Jaggermeister", "Aperol", "Disaronno"],
           },
-          { label: "Proseco", subItems: ["Mionetto", "Moët"] },
+          { label: "Prosecco", subItems: ["Mionetto", "Moët"] },
         ],
       },
     ],

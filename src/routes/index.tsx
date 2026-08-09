@@ -359,103 +359,133 @@ function Index() {
       {/* BĂUTURI */}
       <Section id="bauturi" title="Meniu băuturi">
         <div className="mx-auto max-w-3xl border border-border bg-card px-6 py-10 sm:px-14 sm:py-14">
-          {drinksMenu.map((cat, i) => (
-            <Reveal key={cat.name} delay={i * 60}>
-              <div className="mb-10 last:mb-0">
-                <h3 className="text-center font-sans text-sm uppercase tracking-[0.35em] text-accent">
-                  {cat.name}
-                </h3>
-                {cat.subSections && cat.subSections.length > 0 ? (
-                  <div className="mt-6 space-y-6">
-                    {cat.subSections.map((section) => {
-                      const sectionItems = (section.items ?? []) as DrinkItem[];
+          {drinksMenu.map((cat, i) => {
+            const isNonAlcoholic = cat.name === "Băuturi non-alcoolice";
 
-                      return (
-                        <div key={section.name}>
-                          <h4 className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                            {section.name}
-                          </h4>
-                          <ul className="mt-3 space-y-3">
-                            {sectionItems.map((it: DrinkItem, k: number) => {
-                              if (typeof it === "string") {
+            return (
+              <Reveal key={cat.name} delay={i * 60}>
+                <div
+                  className={`mb-10 last:mb-0 ${isNonAlcoholic ? "mt-[5px]" : ""}`}
+                >
+                  <h3 className="text-center font-sans text-sm uppercase tracking-[0.35em] text-accent">
+                    {cat.name}
+                  </h3>
+                  {cat.subSections && cat.subSections.length > 0 ? (
+                    <div className="mt-6 space-y-6">
+                      {cat.subSections.map((section) => {
+                        const sectionItems = (section.items ??
+                          []) as DrinkItem[];
+
+                        return (
+                          <div key={section.name}>
+                            <h4 className="font-sans text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                              {section.name}
+                            </h4>
+                            <ul className="mt-3 space-y-3">
+                              {sectionItems.map((it: DrinkItem, k: number) => {
+                                if (typeof it === "string") {
+                                  return (
+                                    <li
+                                      key={`${section.name}-${k}`}
+                                      className="flex items-center gap-3"
+                                    >
+                                      <span className="shrink-0 font-serif text-lg font-light">
+                                        {it}
+                                      </span>
+                                      <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                                        <span className="inline-block w-full border-b border-dotted border-border" />
+                                      </span>
+                                    </li>
+                                  );
+                                }
+
                                 return (
                                   <li
                                     key={`${section.name}-${k}`}
-                                    className="flex items-center gap-3"
+                                    className="flex flex-wrap items-center gap-x-3 gap-y-2"
                                   >
                                     <span className="shrink-0 font-serif text-lg font-light">
-                                      {it}
+                                      {it.label}
                                     </span>
-                                    <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
-                                      <span className="inline-block w-full border-b border-dotted border-border" />
+                                    <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
+                                      <span className="block w-full border-b border-dotted border-border" />
                                     </span>
+                                    <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
+                                      {(it.subItems ?? []).map(
+                                        (subItem, subIndex) => (
+                                          <span
+                                            key={`${it.label}-${subIndex}`}
+                                            className="whitespace-nowrap font-serif text-lg font-light leading-snug"
+                                          >
+                                            {subItem}
+                                            {subIndex <
+                                            (it.subItems?.length ?? 0) - 1
+                                              ? " / "
+                                              : ""}
+                                          </span>
+                                        ),
+                                      )}
+                                    </div>
                                   </li>
                                 );
-                              }
+                              })}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <ul className="mt-5 space-y-3">
+                      {(cat.items ?? []).map((it: DrinkItem, k: number) => {
+                        if (typeof it === "string") {
+                          return (
+                            <li
+                              key={`${cat.name}-${k}`}
+                              className="flex items-center gap-3"
+                            >
+                              <span className="shrink-0 font-serif text-lg font-light">
+                                {it}
+                              </span>
+                              <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                                <span className="inline-block w-full border-b border-dotted border-border" />
+                              </span>
+                            </li>
+                          );
+                        }
 
-                              return (
-                                <li
-                                  key={`${section.name}-${k}`}
-                                  className="flex flex-wrap items-center gap-x-3 gap-y-2"
-                                >
-                                  <span className="shrink-0 font-serif text-lg font-light">
-                                    {it.label}
-                                  </span>
-                                  <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
-                                    <span className="block w-full border-b border-dotted border-border" />
-                                  </span>
-                                  <span className="w-full font-serif text-lg font-light leading-snug sm:ml-auto sm:w-auto sm:text-right">
-                                    {it.subItems?.join(" / ")}
-                                  </span>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <ul className="mt-5 space-y-3">
-                    {(cat.items ?? []).map((it: DrinkItem, k: number) => {
-                      if (typeof it === "string") {
                         return (
                           <li
                             key={`${cat.name}-${k}`}
-                            className="flex items-center gap-3"
+                            className="flex flex-wrap items-center gap-x-3 gap-y-2"
                           >
                             <span className="shrink-0 font-serif text-lg font-light">
-                              {it}
+                              {it.label}
                             </span>
-                            <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
-                              <span className="inline-block w-full border-b border-dotted border-border" />
+                            <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
+                              <span className="block w-full border-b border-dotted border-border" />
                             </span>
+                            <div className="ml-auto flex min-w-0 flex-1 flex-wrap justify-end gap-x-2 gap-y-1 text-right">
+                              {(it.subItems ?? []).map((subItem, subIndex) => (
+                                <span
+                                  key={`${it.label}-${subIndex}`}
+                                  className="whitespace-nowrap font-serif text-lg font-light leading-snug"
+                                >
+                                  {subItem}
+                                  {subIndex < (it.subItems?.length ?? 0) - 1
+                                    ? " / "
+                                    : ""}
+                                </span>
+                              ))}
+                            </div>
                           </li>
                         );
-                      }
-
-                      return (
-                        <li
-                          key={`${cat.name}-${k}`}
-                          className="flex flex-wrap items-center gap-x-3 gap-y-2"
-                        >
-                          <span className="shrink-0 font-serif text-lg font-light">
-                            {it.label}
-                          </span>
-                          <span className="min-w-[3rem] flex-1 self-end sm:min-w-[6rem]">
-                            <span className="block w-full border-b border-dotted border-border" />
-                          </span>
-                          <span className="w-full font-serif text-lg font-light leading-snug sm:ml-auto sm:w-auto sm:text-right">
-                            {it.subItems?.join(" / ")}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </div>
-            </Reveal>
-          ))}
+                      })}
+                    </ul>
+                  )}
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </Section>
 
