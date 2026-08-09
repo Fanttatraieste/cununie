@@ -490,9 +490,6 @@ function Index() {
                   Recomandări restaurante
                 </h3>
               </div>
-              <p className="mt-4 font-sans text-base text-muted-foreground">
-                Dacă vrei să iei o masă înainte de eveniment, îți recomandăm:
-              </p>
               <div className="mt-6 space-y-4">
                 {restaurantRecommendations.map((rest) => (
                   <article
